@@ -1,0 +1,21 @@
+public class SwapNumbers {
+    public static void main(String[] args) {
+        int a=9;
+        int b=4;
+
+        a=a+b; //9+4=13
+        b=a-b; //13-4=9
+        a=a-b;//13-9=4
+
+        System.out.println("a="+a);
+        System.out.println("b="+b);
+
+    }
+
+ /* Swap two numbers
+ Create a program that will swap two variables' values
+ Do it without using a third variable
+
+  */
+
+    }
