@@ -8,21 +8,27 @@ public class Sofiia1 {
    // removeDupes
    public static void main(String[] args) {
        System.out.println(Arrays.toString(removeDupes(new int[]{1, 1, 1, 3, 5, 5, 7, 7, 4, 9, 2, 2})));
+       System.out.println(removeDupes("AAABBBCCCDDD"));
    }
 
-    public static int[] removeDupes(int...dupe){
+    public static int[] removeDupes(int[]dupe){
         Set<Integer> noDupes = new HashSet<>();
         for(int i = 0; i < dupe.length; i++){
-            int temp = dupe[i];
-            for(int j = i+1; j < dupe.length; j++){
-
-                if(temp == dupe[j]){
-                continue;
-                }
-                noDupes.add(temp);
-            }
+            noDupes.add(dupe[i]);
 
         }
       return noDupes.stream().mapToInt(i -> i).toArray();
     }
+
+    public static String removeDupes(String s) {
+       String noDupes = "";
+       for (int i = 0; i < s.length(); i++) {
+           char tmp = s.charAt(i);
+           if (!noDupes.contains(s.charAt(i)+"")){
+               noDupes += tmp;
+           }
+               }
+
+    return noDupes;
+}
 }
