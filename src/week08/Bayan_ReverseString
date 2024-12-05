@@ -1,0 +1,17 @@
+package additionaltasks;
+
+public class ReversedString {
+    // Method to reverse the string
+
+    public static String reverse(String input) {
+        StringBuilder reversedStr = new StringBuilder(input); // Create a StringBuilder object
+        return reversedStr.reverse().toString();  // Reverse the string and convert it back to String
+    }
+
+        public static void main(String[] args) {
+            String input = "ABCD";
+            String reversedStr = reverse(input);
+            System.out.println(reversedStr);  // Output: DCBA
+        }
+    }
+
